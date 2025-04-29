@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
-      <body className={}>
+      <body>
         <ThemeProvider defaultTheme="system" attribute="class">
           {/* 
             TEMPLATE SECTION: Header
@@ -113,6 +113,5 @@ export default function RootLayout({
     </html>
   )
 }
-
 
 
