@@ -10,8 +10,8 @@ import { MobileNav } from '@/components/mobile-nav'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Next.js Template',
-  description: 'A customizable template built with Next.js and Tailwind CSS',
+  title: 'Earthen | Handcrafted Ceramics',
+  description: 'Discover our collection of handmade ceramic pieces crafted with care and attention to detail',
   icons: {
     icon: '/favicon.ico',
   },
@@ -24,27 +24,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
-      <body className={`${inter.className} h-full flex flex-col antialiased`}>
+      <body className={}>
         <ThemeProvider defaultTheme="system" attribute="class">
           {/* 
             TEMPLATE SECTION: Header
             This is a template header - replace with your own navigation
             Consider adding a logo, navigation links, theme toggle, etc.
           */}
-          <header className="border-b">
-            <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <header className="border-b border-border/40">
+            <div className="container mx-auto px-4 h-20 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <MobileNav />
-                <div className="font-semibold">Template Logo</div>
+                <div className="font-serif text-xl tracking-wide">EARTHEN</div>
               </div>
-              <nav className="hidden md:flex gap-6">
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 1</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 2</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 3</a>
+              <nav className="hidden md:flex gap-8">
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors uppercase text-sm tracking-wider">Shop</a>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors uppercase text-sm tracking-wider">Collections</a>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors uppercase text-sm tracking-wider">About</a>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors uppercase text-sm tracking-wider">Process</a>
               </nav>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-4">
                 <ThemeToggle />
-                <Button variant="outline" size="sm">Template Button</Button>
+                <Button variant="ghost" size="sm" className="rounded-none uppercase text-xs tracking-wider">Cart (0)</Button>
               </div>
             </div>
           </header>
@@ -63,43 +64,45 @@ export default function RootLayout({
             Basic footer - replace with your own design
             Consider adding navigation, social links, etc.
           */}
-          <footer className="border-t">
-            <div className="container mx-auto px-4 py-8">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <footer className="border-t border-border/40">
+            <div className="container mx-auto px-4 py-16">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
-                  <h3 className="font-semibold mb-3">Template Brand</h3>
-                  <p className="text-sm text-muted-foreground">
-                    A brief description of your company or project. Replace this with your own content.
+                  <h3 className="font-serif text-lg mb-4">EARTHEN</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Handcrafted ceramics made with intention. Each piece tells a story of craftsmanship and natural beauty.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-3">Links</h3>
-                  <ul className="space-y-2 text-sm">
-                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 1</a></li>
-                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 2</a></li>
-                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 3</a></li>
+                  <h3 className="uppercase text-xs tracking-wider mb-4">Shop</h3>
+                  <ul className="space-y-3 text-sm">
+                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Tableware</a></li>
+                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Vases</a></li>
+                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Planters</a></li>
+                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Decorative Pieces</a></li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-3">Resources</h3>
-                  <ul className="space-y-2 text-sm">
-                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Resource 1</a></li>
-                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Resource 2</a></li>
-                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Resource 3</a></li>
+                  <h3 className="uppercase text-xs tracking-wider mb-4">Information</h3>
+                  <ul className="space-y-3 text-sm">
+                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a></li>
+                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Our Process</a></li>
+                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Care Instructions</a></li>
+                    <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Sustainability</a></li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-3">Contact</h3>
-                  <ul className="space-y-2 text-sm">
-                    <li className="text-muted-foreground">Email: example@template.com</li>
-                    <li className="text-muted-foreground">Phone: (123) 456-7890</li>
-                    <li className="text-muted-foreground">Address: Template Street</li>
+                  <h3 className="uppercase text-xs tracking-wider mb-4">Contact</h3>
+                  <ul className="space-y-3 text-sm">
+                    <li className="text-muted-foreground">Email: hello@earthenceramics.com</li>
+                    <li className="text-muted-foreground">Studio: (555) 123-4567</li>
+                    <li className="text-muted-foreground">123 Clay Studio Lane<br/>Portland, OR 97201</li>
                   </ul>
                 </div>
               </div>
-              <div className="border-t mt-8 pt-4 text-center">
-                <p className="text-sm text-muted-foreground">
-                  © 2024 Template Brand. All rights reserved.
+              <div className="border-t border-border/40 mt-12 pt-6 text-center">
+                <p className="text-xs text-muted-foreground">
+                  © 2024 Earthen Ceramics. All rights reserved.
                 </p>
               </div>
             </div>
@@ -110,3 +113,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+

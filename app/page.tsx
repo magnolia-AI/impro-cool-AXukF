@@ -6,86 +6,142 @@ import { useToast } from "@/hooks/use-toast"
 export default function Home() {
   const { toast } = useToast()
 
-  const showToast = () => {
+  const showNotification = () => {
     toast({
-      title: "Template Toast",
-      description: "This is a sample toast notification - customize it!",
+      title: "Added to cart",
+      description: "Your item has been added to your cart",
     })
   }
 
   return (
     <div className="min-h-full">
-      {/* 
-        TEMPLATE SECTION: Hero
-        This is a template hero section - replace with your own content
-        Feel free to change layout, styling, and content completely
-      */}
-      <section className="container mx-auto px-4 pt-24 pb-20">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 pt-20 pb-24 md:pt-32 md:pb-32">
         <div className="max-w-[800px] mx-auto text-center">
-          <h1 className="text-5xl font-bold tracking-tight lg:text-6xl">
-            Template Starter
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight leading-tight">
+            Handcrafted Ceramics<br />for Mindful Living
           </h1>
-          <p className="mt-6 text-xl text-muted-foreground max-w-[600px] mx-auto">
-            This is a customizable template. Replace all content with your own using the chat interface.
+          <p className="mt-8 text-lg text-muted-foreground max-w-[600px] mx-auto leading-relaxed">
+            Each piece tells a story of craftsmanship, intention, and natural beauty. Made with care in our Portland studio.
           </p>
-          <div className="mt-12 flex gap-4 justify-center">
-            <Button size="lg" className="px-8">Sample Button</Button>
-            <Button size="lg" variant="outline" className="px-8" onClick={showToast}>
-              Show Toast
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="px-8 rounded-none uppercase text-sm tracking-wider">Shop Collection</Button>
+            <Button size="lg" variant="outline" className="px-8 rounded-none uppercase text-sm tracking-wider">
+              Our Process
             </Button>
           </div>
         </div>
       </section>
 
-      {/* 
-        TEMPLATE SECTION: Features
-        This demonstrates a card layout - replace with your own content
-        Consider different layouts like grids, lists, or custom components
-      */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
-          <Card>
-            <CardContent className="pt-6">
-              <h3 className="text-xl font-semibold mb-3">Sample Card 1</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                This is placeholder content. Replace with your own text, images, or components.
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6">
-              <h3 className="text-xl font-semibold mb-3">Sample Card 2</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                This template is fully customizable. Feel free to add, remove, or modify any elements.
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6">
-              <h3 className="text-xl font-semibold mb-3">Sample Card 3</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Use the chat interface to transform this template into your unique design.
-              </p>
-            </CardContent>
-          </Card>
+      {/* Featured Collection */}
+      <section className="bg-secondary py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-serif text-center mb-16">Featured Collection</h2>
+          <div className="grid md:grid-cols-3 gap-12 max-w-[1200px] mx-auto">
+            <Card className="bg-card/50 border-none rounded-none shadow-none overflow-hidden">
+              <div className="aspect-square bg-muted relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1610701596007-11502861dcfa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center"></div>
+              </div>
+              <CardContent className="pt-6">
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-lg font-medium">Minimalist Vase</h3>
+                  <span className="text-sm">8</span>
+                </div>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Hand-thrown stoneware with matte finish
+                </p>
+                <Button variant="ghost" size="sm" className="w-full rounded-none uppercase text-xs tracking-wider" onClick={showNotification}>
+                  Add to Cart
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/50 border-none rounded-none shadow-none overflow-hidden">
+              <div className="aspect-square bg-muted relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center"></div>
+              </div>
+              <CardContent className="pt-6">
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-lg font-medium">Espresso Set</h3>
+                  <span className="text-sm">2</span>
+                </div>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Set of 4 handcrafted espresso cups
+                </p>
+                <Button variant="ghost" size="sm" className="w-full rounded-none uppercase text-xs tracking-wider" onClick={showNotification}>
+                  Add to Cart
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/50 border-none rounded-none shadow-none overflow-hidden">
+              <div className="aspect-square bg-muted relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center"></div>
+              </div>
+              <CardContent className="pt-6">
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-lg font-medium">Serving Bowl</h3>
+                  <span className="text-sm">8</span>
+                </div>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Large serving bowl with speckled glaze
+                </p>
+                <Button variant="ghost" size="sm" className="w-full rounded-none uppercase text-xs tracking-wider" onClick={showNotification}>
+                  Add to Cart
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
-      {/* 
-        TEMPLATE SECTION: Call to Action
-        This is a simple CTA section - customize or replace as needed
-      */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="max-w-[800px] mx-auto text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-6">
-            Template CTA Section
-          </h2>
-          <p className="text-muted-foreground mb-8">
-            This is a template call-to-action section. Replace with your own content and styling.
-          </p>
-          <Button variant="outline" className="px-8">
-            Sample CTA
-          </Button>
+      {/* Our Process */}
+      <section className="container mx-auto px-4 py-24 md:py-32">
+        <div className="max-w-[800px] mx-auto">
+          <h2 className="text-2xl font-serif text-center mb-16">Our Process</h2>
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="aspect-[4/5] bg-muted relative">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center"></div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-medium mb-6">Crafted with Intention</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Each piece begins as a lump of clay and is transformed through a process that honors traditional techniques while embracing modern aesthetics.
+              </p>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Our ceramics are wheel-thrown or hand-built, dried slowly, bisque fired, glazed, and then high-fired to create durable, functional art for everyday use.
+              </p>
+              <Button variant="outline" className="rounded-none uppercase text-sm tracking-wider">
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="bg-primary/5 py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-[500px] mx-auto text-center">
+            <h2 className="text-2xl font-serif mb-6">
+              Join Our Community
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              Subscribe to receive updates on new collections, studio insights, and exclusive offers.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input 
+                type="email" 
+                placeholder="Your email address" 
+                className="flex h-10 w-full rounded-none border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              />
+              <Button className="rounded-none uppercase text-xs tracking-wider">
+                Subscribe
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
